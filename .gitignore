@@ -30,6 +30,3 @@ dist-ssr
 .env.development.local
 .env.test.local
 .env.production.local
-
-# Firebase configuration
-# src/config/firebase.js
