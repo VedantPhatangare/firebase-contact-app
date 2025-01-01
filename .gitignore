@@ -32,4 +32,4 @@ dist-ssr
 .env.production.local
 
 # Firebase configuration
-src/config/firebase.js
+# src/config/firebase.js
