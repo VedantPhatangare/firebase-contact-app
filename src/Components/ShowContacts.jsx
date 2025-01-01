@@ -14,10 +14,13 @@ function ShowContacts({contacts,handleDelete,handleEdit}) {
                     <img src="/images/contactface.png" alt="" />
                     </div>
                     <p className='text-2xl font-semibold text-white'>No Contacts Found</p>
-                </div>)
+                </div>
+                )
     }
 
-    {
+
+    { 
+    
       contacts.map((contact)=>{
           return(
             <div key={contact.id} >

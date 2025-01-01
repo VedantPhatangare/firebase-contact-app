@@ -12,6 +12,7 @@ function EditContact({onClick,Contactid}) {
             const data = temp.data();
             setformData({...data})
     }
+    
   return (
     <div >
         <TbUserEdit className='text-3xl cursor-pointer' onClick={()=>{setHI((prev)=>~prev); fetchContact()}}/>

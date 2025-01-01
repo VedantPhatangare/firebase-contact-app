@@ -11,7 +11,7 @@ function Form({onClick,Client,Contactid=undefined}) {
       e.preventDefault();
       Contactid? onClick(formData,Contactid): onClick(formData);;
       Contactid? setHI(false): setshowForm(false)
-      setformData({name:"",email:""})
+      // setformData({name:"",email:""})
     }
 
   return (
