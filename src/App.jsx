@@ -8,10 +8,8 @@ import SearchBar from './Components/SearchBar'
 import ShowContacts from './Components/ShowContacts'
 import {addDoc, collection, deleteDoc,doc, onSnapshot, updateDoc} from 'firebase/firestore'
 import {db} from './config/firebase'
-import { useContact } from './Context/ContactContext';
 function App() {
   const [contacts, setcontacts] = useState([])
-  const {setformData}= useContact()
   const getContacts = ()=>{
       try {
         const contactsRef = collection(db,"contacts")
@@ -31,7 +29,7 @@ function App() {
   const handleAdd =async(obj)=>{
       await addDoc(collection(db,"contacts"),obj)
       toast.success("added")
-      
+      // setformData({name:"",email:""})
   }
   const handleDelete= async(id)=>{
       await deleteDoc(doc(collection(db,"contacts"),id))
@@ -40,7 +38,6 @@ function App() {
 
   const handleEdit=async(obj,id)=>{
     await updateDoc(doc(collection(db,"contacts"), id),obj)
-    setformData({name:"",email:""})
   }
   
   useEffect(() => {

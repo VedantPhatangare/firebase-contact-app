@@ -34,6 +34,8 @@ function ShowContacts({contacts,handleDelete,handleEdit}) {
               </div>
               <div className='flex gap-1'>
               <EditContact onClick={handleEdit} Contactid={contact.id} />
+             { console.log("contactid from ShowContacts:",contact.id)}
+              
               <AiFillDelete onClick={()=>handleDelete(contact.id)} className='text-3xl fill-purple cursor-pointer'/>
               </div>
             </div>
